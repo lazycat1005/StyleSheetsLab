@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clip-path</title>
+  <style>
+    /* ez reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #14213d;
+    }
+
+    p {
+      font-size: 30px;
+    }
+
+    .container1,
+    .container2 {
+      text-align: center;
+      width: 70%;
+      height: 700px;
+      padding: 5%;
+    }
+
+    .container1 {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #fca311;
+      color: #e5e5e5;
+      clip-path: circle(10% at 10% 30%);
+      animation: move 8s alternate infinite;
+    }
+
+    .container2 {
+      background-color: #14213d;
+      margin: 0 auto;
+    }
+
+    @keyframes move {
+      50% {
+        clip-path: circle(15% at 50% 50%);
+      }
+
+      100% {
+        clip-path: circle(10% at 85% 40%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 第二層文字 -->
+  <div class="container1">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nihil repellat molestiae atque quis rem
+      blanditiis, nesciunt dolorem incidunt ex repudiandae provident exercitationem saepe eum ullam sint facere
+      aliquam corrupti?
+      Esse et repellat vel voluptates veritatis magni necessitatibus. Tempore delectus modi animi qui natus ipsa
+      neque est in quos dolorum cumque iste nulla, assumenda minus perspiciatis sint dolor atque excepturi?
+      Expedita similique exercitationem veritatis a natus eaque et quibusdam explicabo corrupti, impedit aperiam
+      assumenda accusantium doloremque modi iusto excepturi debitis odio dolor, non labore nobis? Delectus qui ea
+      sint eum!
+      Suscipit molestiae asperiores ex necessitatibus assumenda culpa dignissimos expedita odio officia ullam,
+      exercitationem et tenetur mollitia ut perspiciatis iure? Debitis, nostrum nam. Iure, excepturi ipsum tempora
+      deserunt placeat quod sunt!
+      Expedita illum, dolore nostrum laboriosam earum, cum obcaecati nam eos enim dignissimos repellendus nihil,
+      suscipit recusandae animi harum accusamus? Magni magnam hic soluta nisi libero esse adipisci et ea rerum!
+      Distinctio fugit perferendis quibusdam magnam, quod ex dolores quo, natus voluptates quia quaerat iusto
+      dolore, eveniet corrupti error maiores totam odit dolorem commodi vitae placeat asperiores veniam!
+      Repellendus, maiores sit.
+    </p>
+  </div>
+  <!-- 表層文字 -->
+  <div class="container2">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione nihil repellat molestiae atque quis rem
+      blanditiis, nesciunt dolorem incidunt ex repudiandae provident exercitationem saepe eum ullam sint facere
+      aliquam corrupti?
+      Esse et repellat vel voluptates veritatis magni necessitatibus. Tempore delectus modi animi qui natus ipsa
+      neque est in quos dolorum cumque iste nulla, assumenda minus perspiciatis sint dolor atque excepturi?
+      Expedita similique exercitationem veritatis a natus eaque et quibusdam explicabo corrupti, impedit aperiam
+      assumenda accusantium doloremque modi iusto excepturi debitis odio dolor, non labore nobis? Delectus qui ea
+      sint eum!
+      Suscipit molestiae asperiores ex necessitatibus assumenda culpa dignissimos expedita odio officia ullam,
+      exercitationem et tenetur mollitia ut perspiciatis iure? Debitis, nostrum nam. Iure, excepturi ipsum tempora
+      deserunt placeat quod sunt!
+      Expedita illum, dolore nostrum laboriosam earum, cum obcaecati nam eos enim dignissimos repellendus nihil,
+      suscipit recusandae animi harum accusamus? Magni magnam hic soluta nisi libero esse adipisci et ea rerum!
+      Distinctio fugit perferendis quibusdam magnam, quod ex dolores quo, natus voluptates quia quaerat iusto
+      dolore, eveniet corrupti error maiores totam odit dolorem commodi vitae placeat asperiores veniam!
+      Repellendus, maiores sit.
+    </p>
+  </div>
+</body>
+
+</html>
